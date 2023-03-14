@@ -1,0 +1,233 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global styles */
+$primary-color: #00FFFF;
+$secondary-color: #000000;
+
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+/* First block */
+.one {
+  width: 50%;
+  padding: 55px;
+  background-color: $primary-color;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+  h1 {
+    color: $secondary-color;
+    font-size: 39px;
+    text-align: center;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: black;
+      font-size: 26px;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+}
+
+/* Second block */
+.two {
+  button {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 0.5rem 1rem;
+    margin-left: 50px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    color: #000;
+    font-size: 22px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background-color: $secondary-color;
+    margin: 15% auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    width: 80%;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .close {
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.color-b {
+    margin-left: 30px;
+}
+
+$light-size: 60px;
+
+.traffic-light {
+  width: $light-size / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: $light-size * 3;
+  background-color: black;
+  padding: $light-size / 4;
+  margin-left: 30px;
+
+  .red, .yellow, .green {
+    border-radius: 50%;
+    height: $light-size;
+    width: $light-size;
+    margin: 0 auto;
+    opacity: 0.4; // установка начального значения прозрачности для неактивных светофоров
+  }
+
+  .red.active, .yellow.active, .green.active {
+    opacity: 1; // установка значения прозрачности для активного светофора
+  }
+
+  .red {
+    background-color: rgb(255, 20, 39);
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+  }
+
+  .yellow {
+    background-color: yellow;
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+  }
+
+  .green {
+    background-color: rgb(3, 255, 24);
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+  }
+
+  .red.inactive, .yellow.inactive, .green.inactive {
+    filter: brightness(60%); // затемнение неактивных светофоров
+  }
+}
+
+#change-color-btn {
+  margin-top: 1rem;
+}
